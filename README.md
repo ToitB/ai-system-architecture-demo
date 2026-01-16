@@ -101,7 +101,6 @@ uvicorn app:app --reload
 ```
 
 The API will be available at `http://localhost:8000`
-
 API documentation (Swagger UI): `http://localhost:8000/docs`
 
 ### Example Request
@@ -131,21 +130,25 @@ ai-system-architecture-demo/
     └── example_documents.txt          # Sample inputs for testing
 ```
 
-## Design Principles Demonstrated
+Design Principles Demonstrated
 
-1. **Separation of Concerns**: API layer, business logic, and external services are clearly separated
-2. **Dependency Injection**: Services are loosely coupled and easily mockable
-3. **Interface-based Design**: Abstract interfaces for external dependencies
-4. **Stateless API**: Each request is independent
-5. **Simple Error Handling**: Basic error responses (not production-ready)
+Separation of Concerns – API, orchestration, and services are isolated
+Dependency Injection – Services are loosely coupled and mockable
+Interface-based Design – External dependencies are abstracted
+Stateless API – Requests are handled independently
+Simple Error Handling – Demonstrative, not production-grade
 
-## Use Cases for This Demo
+Use Cases for This Demo
 
-- Understanding basic AI application architecture
-- Learning FastAPI patterns
-- Exploring service layer design
-- Educational purposes and technical discussions
-- Starting point for experimentation (requires significant extension)
+Understanding basic AI application architecture
+
+Learning FastAPI service patterns
+
+Exploring orchestration layer design
+
+Educational purposes and technical discussion
+
+Starting point for experimentation (requires significant extension)
 
 ## License
 
