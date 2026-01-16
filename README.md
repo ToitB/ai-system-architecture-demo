@@ -14,6 +14,8 @@ This is a **REFERENCE ARCHITECTURE** and **EDUCATIONAL DEMO ONLY**.
 
 This project demonstrates a minimal, skeletal architecture for AI-powered document processing systems. It is intentionally incomplete and **NOT suitable for production use**.
 
+All AI processing is mocked and produces synthetic results.
+
 ---
 
 ## What This Demo Includes
@@ -28,15 +30,15 @@ This project demonstrates a minimal, skeletal architecture for AI-powered docume
 
 ## What This Demo Does NOT Include
 
-- ❌ Real AI/ML models or inference logic
-- ❌ Domain-specific business logic or workflows
-- ❌ Optimized prompts or production-ready AI strategies
-- ❌ Proprietary processing pipelines
-- ❌ Authentication, authorization, or security features
-- ❌ Production-ready error handling or logging
-- ❌ Database integration or persistent storage
-- ❌ Performance optimizations
-- ❌ Comprehensive testing
+- ❌ Real AI/ML models or inference logic  
+- ❌ Domain-specific business logic or workflows  
+- ❌ Optimized prompts or production-ready AI strategies  
+- ❌ Proprietary processing pipelines  
+- ❌ Authentication, authorization, or security features  
+- ❌ Production-ready error handling or logging  
+- ❌ Database integration or persistent storage  
+- ❌ Performance optimizations  
+- ❌ Comprehensive testing  
 
 ---
 
@@ -44,7 +46,7 @@ This project demonstrates a minimal, skeletal architecture for AI-powered docume
 
 This demo illustrates a simple three-tier architecture:
 
-```
+```text
 ┌─────────────┐
 │   FastAPI   │  ← HTTP REST API Layer
 │   (app.py)  │
@@ -63,7 +65,7 @@ This demo illustrates a simple three-tier architecture:
 └──────────────┘ └─────────────┘ └──────────┘
 ```
 
-See `architecture/system-overview.md` for more details.
+See `architecture/system-overview.md` for more detailed architectural notes.
 
 ---
 
@@ -84,15 +86,16 @@ python -m venv venv
 # Windows:
 venv\Scripts\activate
 
-# Linux/Mac:
+# Linux / macOS:
 source venv/bin/activate
 
 # Install dependencies
 pip install -r backend/requirements.txt
-
 ```
 
-### Running the Demo
+---
+
+## Running the Demo
 
 ```bash
 # From the project root
@@ -100,10 +103,14 @@ cd backend
 uvicorn app:app --reload
 ```
 
-The API will be available at `http://localhost:8000`
-API documentation (Swagger UI): `http://localhost:8000/docs`
+The API will be available at:
 
-### Example Request
+- http://localhost:8000  
+- Swagger UI: http://localhost:8000/docs
+
+---
+
+## Example Request
 
 ```bash
 curl -X POST "http://localhost:8000/api/process" \
@@ -111,32 +118,38 @@ curl -X POST "http://localhost:8000/api/process" \
   -d '{"document_text": "Sample document content", "task_type": "analysis"}'
 ```
 
+---
+
 ## Project Structure
 
-```
+```text
 ai-system-architecture-demo/
-├── README.md                          # This file
-├── LICENSE                            # MIT License
+├── README.md
+├── LICENSE
 ├── architecture/
-│   └── system-overview.md             # Detailed architecture notes
+│   └── system-overview.md
 ├── backend/
-│   ├── app.py                         # FastAPI application entry point
-│   ├── requirements.txt               # Python dependencies
+│   ├── app.py
+│   ├── requirements.txt
 │   └── services/
-│       ├── orchestrator.py            # Request coordination logic
-│       ├── inference_adapter.py       # Mock AI inference interface
-│       └── storage.py                 # Mock storage interface
+│       ├── orchestrator.py
+│       ├── inference_adapter.py
+│       └── storage.py
 └── sample_data/
-    └── example_documents.txt          # Sample inputs for testing
+    └── example_documents.txt
 ```
+
+---
 
 ## Design Principles Demonstrated
 
- - Separation of Concerns – API, orchestration, and services are isolated
- - Dependency Injection – Services are loosely coupled and mockable
- - Interface-based Design – External dependencies are abstracted
- - Stateless API – Requests are handled independently
- - Simple Error Handling – Demonstrative, not production-grade
+- **Separation of Concerns** – API layer, orchestration logic, and services are isolated
+- **Dependency Injection** – Services are loosely coupled and easily mockable
+- **Interface-based Design** – External dependencies are abstracted
+- **Stateless API** – Each request is handled independently
+- **Simple Error Handling** – Demonstrative, not production-grade
+
+---
 
 ## Use Cases for This Demo
 
@@ -146,15 +159,18 @@ ai-system-architecture-demo/
 - Educational purposes and technical discussion
 - Starting point for experimentation (requires significant extension)
 
+---
+
 ## License
 
-MIT License - See [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-This is a reference demo and is not actively maintained.
-Feel free to fork and adapt for learning purposes.
+MIT License — see the `LICENSE` file for details.
 
 ---
 
-**Remember**: This is a skeleton architecture only. Real-world AI applications require significant additional work including security, monitoring, testing, optimization, and domain-specific logic.
+## Contributing
+
+This is a reference demo and is not actively maintained.  
+Feel free to fork and adapt it for your own learning purposes.
+
+> **Reminder:** This is a skeleton architecture only.  
+> Real-world AI applications require additional work including security, monitoring, testing, optimisation, and domain-specific logic.
