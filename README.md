@@ -155,9 +155,6 @@ MIT License - See [LICENSE](LICENSE) file for details.
 This is a reference demo and is not actively maintained.
 Feel free to fork and adapt for learning purposes.
 
-Reminder: This is a skeleton architecture only.
-Real-world AI systems require additional work in security, monitoring, testing, optimisation, and domain-specific logic.
-
 ---
 
 **Remember**: This is a skeleton architecture only. Real-world AI applications require significant additional work including security, monitoring, testing, optimization, and domain-specific logic.
