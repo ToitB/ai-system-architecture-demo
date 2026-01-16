@@ -130,7 +130,7 @@ ai-system-architecture-demo/
     └── example_documents.txt          # Sample inputs for testing
 ```
 
-##Design Principles Demonstrated
+## Design Principles Demonstrated
 
  - Separation of Concerns – API, orchestration, and services are isolated
  - Dependency Injection – Services are loosely coupled and mockable
@@ -138,7 +138,7 @@ ai-system-architecture-demo/
  - Stateless API – Requests are handled independently
  - Simple Error Handling – Demonstrative, not production-grade
 
-##Use Cases for This Demo
+## Use Cases for This Demo
 
 - Understanding basic AI application architecture
 - Learning FastAPI service patterns
