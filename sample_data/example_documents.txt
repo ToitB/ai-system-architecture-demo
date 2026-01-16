@@ -1,0 +1,104 @@
+# Sample Documents for AI System Architecture Demo
+
+This file contains example documents you can use to test the API.
+All examples are synthetic and generic.
+
+## Example 1: Business Report (Short)
+The quarterly financial results exceeded expectations with a 15% increase in revenue. 
+Key drivers included strong product sales and improved operational efficiency. 
+Management remains optimistic about continued growth in the upcoming quarter.
+
+## Example 2: Technical Documentation
+The application architecture consists of three primary layers: presentation, business logic, and data access. 
+The presentation layer handles user interactions through a web interface. 
+The business logic layer processes requests and applies validation rules. 
+The data access layer manages persistence operations using a relational database. 
+Each layer maintains clear separation of concerns to enhance maintainability.
+
+## Example 3: General Communication
+Please be advised that the scheduled maintenance window will occur this weekend from Saturday 10 PM to Sunday 2 AM. 
+During this time, all services will be temporarily unavailable. 
+We apologize for any inconvenience and appreciate your patience. 
+Normal operations will resume on Sunday morning.
+
+## Example 4: Product Description
+This ergonomic office chair features adjustable lumbar support, breathable mesh backing, and multi-directional armrests. 
+The pneumatic height adjustment allows customization for users of varying heights. 
+The chair is rated for eight hours of daily use and includes a five-year warranty. 
+Available in black, gray, and navy blue colors.
+
+## Example 5: Meeting Notes
+Attendees discussed project timeline and resource allocation. 
+Action items include completing the design review by Friday and scheduling follow-up meetings with stakeholders. 
+Budget constraints were noted, requiring careful prioritization of features. 
+Next meeting scheduled for two weeks from today.
+
+## Example 6: Research Abstract
+This study examines the relationship between exercise frequency and cognitive performance in adults. 
+Participants were divided into three groups based on weekly activity levels. 
+Results indicate a positive correlation between regular physical activity and improved memory retention. 
+Further research is recommended to explore long-term effects across different age groups.
+
+## Example 7: Customer Feedback
+The product arrived promptly and was well-packaged. 
+Setup instructions were clear and easy to follow. 
+The quality exceeded expectations for the price point. 
+Would definitely recommend to others looking for similar products. 
+Overall a very positive experience.
+
+## Example 8: Policy Statement
+All employees are required to complete annual security training by December 31st. 
+Training modules cover data protection, password management, and incident reporting procedures. 
+Completion certificates must be submitted to the HR department. 
+Failure to complete training may result in access restrictions to company systems.
+
+---
+
+## Usage Examples
+
+### Using curl:
+
+# Analysis task
+curl -X POST "http://localhost:8000/api/process" \
+  -H "Content-Type: application/json" \
+  -d '{"document_text": "The quarterly financial results exceeded expectations with a 15% increase in revenue.", "task_type": "analysis"}'
+
+# Summarization task
+curl -X POST "http://localhost:8000/api/process" \
+  -H "Content-Type: application/json" \
+  -d '{"document_text": "This ergonomic office chair features adjustable lumbar support, breathable mesh backing, and multi-directional armrests. The pneumatic height adjustment allows customization for users of varying heights.", "task_type": "summarization"}'
+
+# Classification task
+curl -X POST "http://localhost:8000/api/process" \
+  -H "Content-Type: application/json" \
+  -d '{"document_text": "This study examines the relationship between exercise frequency and cognitive performance in adults.", "task_type": "classification"}'
+
+### Using Python requests:
+
+import requests
+
+url = "http://localhost:8000/api/process"
+
+# Example request
+response = requests.post(url, json={
+    "document_text": "The quarterly financial results exceeded expectations.",
+    "task_type": "analysis"
+})
+
+print(response.json())
+
+### Using JavaScript fetch:
+
+const response = await fetch('http://localhost:8000/api/process', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    document_text: 'The quarterly financial results exceeded expectations.',
+    task_type: 'analysis'
+  })
+});
+
+const result = await response.json();
+console.log(result);

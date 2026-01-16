@@ -1,0 +1,27 @@
+# AI System Architecture Demo - Python Dependencies
+
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# Data Validation
+pydantic==2.5.3
+
+# HTTP Client (for external API calls in real implementations)
+httpx==0.26.0
+
+# Optional: Testing dependencies (commented out for minimal install)
+# pytest==7.4.4
+# pytest-asyncio==0.23.3
+
+# Optional: Production deployment (commented out for minimal install)
+# gunicorn==21.2.0
+
+# Note: This is a minimal set of dependencies for the demo.
+# A production system would include:
+# - Database drivers (psycopg2, motor, etc.)
+# - Caching (redis)
+# - Monitoring (prometheus-client)
+# - Logging (python-json-logger)
+# - Security (python-jose, passlib)
+# - AI/ML libraries (openai, transformers, etc.)
