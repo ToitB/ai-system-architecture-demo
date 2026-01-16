@@ -1,5 +1,12 @@
 # AI System Architecture Demo
 
+## How to Discuss This Repository in Interviews
+
+- This repository demonstrates how I design AI-enabled systems with clear separation between API, orchestration, inference, and storage layers.
+- The focus is on architecture, boundaries, and operational constraints rather than model training or optimisation.
+- AI inference is intentionally mocked; production inference logic is private, but the architectural patterns are the same.
+
+
 ## ⚠️ IMPORTANT DISCLAIMER
 
 **This is a REFERENCE ARCHITECTURE and EDUCATIONAL DEMO ONLY.**
