@@ -2,18 +2,21 @@
 
 ## How to Discuss This Repository in Interviews
 
-- This repository demonstrates how I design AI-enabled systems with clear separation between API, orchestration, inference, and storage layers.
-- The focus is on architecture, boundaries, and operational constraints rather than model training or optimisation.
+- Demonstrates how I design AI-enabled systems with clear separation between API, orchestration, inference, and storage layers.
+- Focuses on architecture, boundaries, and operational constraints rather than model training or optimisation.
 - AI inference is intentionally mocked; production inference logic is private, but the architectural patterns are the same.
 
+---
 
 ## ⚠️ IMPORTANT DISCLAIMER
 
-**This is a REFERENCE ARCHITECTURE and EDUCATIONAL DEMO ONLY.**
+This is a **REFERENCE ARCHITECTURE** and **EDUCATIONAL DEMO ONLY**.
 
-This project demonstrates a minimal, skeletal architecture for AI-powered document processing systems. It is intentionally incomplete and NOT suitable for production use.
+This project demonstrates a minimal, skeletal architecture for AI-powered document processing systems. It is intentionally incomplete and **NOT suitable for production use**.
 
-### What This Demo Includes
+---
+
+## What This Demo Includes
 
 - Basic FastAPI application structure
 - Simple orchestration pattern for handling requests
@@ -21,7 +24,9 @@ This project demonstrates a minimal, skeletal architecture for AI-powered docume
 - In-memory storage simulation
 - Clean separation of concerns between layers
 
-### What This Demo DOES NOT Include
+---
+
+## What This Demo Does NOT Include
 
 - ❌ Real AI/ML models or inference logic
 - ❌ Domain-specific business logic or workflows
@@ -33,9 +38,11 @@ This project demonstrates a minimal, skeletal architecture for AI-powered docume
 - ❌ Performance optimizations
 - ❌ Comprehensive testing
 
+---
+
 ## Architecture Overview
 
-This demo illustrates a three-tier architecture:
+This demo illustrates a simple three-tier architecture:
 
 ```
 ┌─────────────┐
@@ -56,7 +63,9 @@ This demo illustrates a three-tier architecture:
 └──────────────┘ └─────────────┘ └──────────┘
 ```
 
-See [architecture/system-overview.md](architecture/system-overview.md) for more details.
+See `architecture/system-overview.md` for more details.
+
+---
 
 ## Quick Start
 
@@ -74,11 +83,13 @@ python -m venv venv
 # Activate virtual environment
 # Windows:
 venv\Scripts\activate
+
 # Linux/Mac:
 source venv/bin/activate
 
 # Install dependencies
 pip install -r backend/requirements.txt
+
 ```
 
 ### Running the Demo
@@ -142,7 +153,11 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-This is a reference demo and not actively maintained. Feel free to fork and adapt for your own learning purposes.
+This is a reference demo and is not actively maintained.
+Feel free to fork and adapt for learning purposes.
+
+Reminder: This is a skeleton architecture only.
+Real-world AI systems require additional work in security, monitoring, testing, optimisation, and domain-specific logic.
 
 ---
 
